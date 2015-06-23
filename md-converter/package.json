@@ -1,0 +1,25 @@
+{
+  "main": "index.html",
+  "name": "md-converter",
+  "description": "simple converter markdown to html using nw.js",
+  "version": "0.1.0",
+  "keywords": [
+    "demo",
+    "node-webkit"
+  ],
+  "window": {
+    "title": "md-converter",
+    "toolbar": false,
+    "frame": true,
+    "width": 1200,
+    "height": 800,
+    "position": "mouse",
+    "min_width": 1200,
+    "min_height": 800,
+    "max_width": 1200,
+    "max_height": 800
+  },
+  "dependencies": {
+    "markdown": "^0.5.0"
+  }
+}

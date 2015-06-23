@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>md converter</title>
+
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	 <textarea class="input-md" oninput="this.editor.update()"></textarea>
+   <div class="preview"> </div>
+
+	<script src="node_modules/markdown/lib/markdown.js"></script>
+	<script>
+      function Editor(input, preview) {
+        this.update = function () {
+          preview.innerHTML = markdown.toHTML(input.value);
+        };
+        input.editor = this;
+        this.update();
+      }
+      var $ = function (id) { return document.querySelector(id); };
+      new Editor($(".input-md"), $(".preview"));
+    </script>
+</body>
+</html>
