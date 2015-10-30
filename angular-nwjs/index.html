@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>angular hahaha</title>
+</head>
+<body ng-controller="appController as vm">
+	{{ vm.oi }} {{ user }}
+	<br>
+	<label for="">Digite seu nome:</label>
+	<input type="text" ng-model="user">
+	<script src="bower_components/angular/angular.min.js"></script>
+
+	<script>
+		angular
+			.module('app', [])
+			.controller('appController', appController);
+
+			function appController() {
+				var vm = this;
+
+				vm.oi = 'oi Meu nome é 	';
+			}
+	</script>
+</body>
+</html>
